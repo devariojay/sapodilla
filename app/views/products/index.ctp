@@ -12,7 +12,6 @@
 	</tr>
 	<?php
 	$i = 0;
-	
 	foreach ($products as $product):
 		$class = null;
 		if ($i++ % 2 == 0) {

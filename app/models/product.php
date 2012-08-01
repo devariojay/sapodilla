@@ -107,7 +107,23 @@ class Product extends AppModel {
 		    'finderQuery'            => '',
 		    'deleteQuery'            => '',
 		    'insertQuery'            => ''
-		)
+		),
+	//    'Photo' =>
+	//	array(
+	//	    'className'              => 'Photo',
+	//	    'joinTable'              => 'photos_products',
+	//	    'foreignKey'             => 'product_id',
+	//	    'associationForeignKey'  => 'photo_id',
+	//	    'unique'                 => false,
+	//	    'conditions'             => '',
+	//	    'fields'                 => '',
+	//	    'order'                  => '',
+	//	    'limit'                  => '',
+	//	    'offset'                 => '',
+	//	    'finderQuery'            => '',
+	//	    'deleteQuery'            => '',
+	//	    'insertQuery'            => ''
+	//	)
 	);
 
 }

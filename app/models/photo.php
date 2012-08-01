@@ -51,5 +51,23 @@ class Photo extends AppModel {
 	//		'counterQuery' => ''
 	//	)
 	//);
+	//var $hasAndBelongsToMany = array(
+	//    'Product' =>
+	//	array(
+	//	    'className'              => 'Product',
+	//	    'joinTable'              => 'photos_products',
+	//	    'foreignKey'             => 'photo_id',
+	//	    'associationForeignKey'  => 'product_id',
+	//	    'unique'                 => true,
+	//	    'conditions'             => '',
+	//	    'fields'                 => '',
+	//	    'order'                  => '',
+	//	    'limit'                  => '',
+	//	    'offset'                 => '',
+	//	    'finderQuery'            => '',
+	//	    'deleteQuery'            => '',
+	//	    'insertQuery'            => ''
+	//	)
+	//);
 	
 }

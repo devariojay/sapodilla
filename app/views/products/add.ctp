@@ -4,7 +4,7 @@
 		<legend><?php __('Add Product'); ?></legend>
 	<?php
 		echo $this->Form->input('title');
-		echo $this->Form->input('Photos', array('multiple' => 'checkbox'));
+		echo $this->Form->input('Photo', array('multiple' => 'checkbox'));
 		echo $this->Form->input('Size', array('multiple' => 'checkbox'));
 		echo $this->Form->input('price');
 		echo $this->Form->input('paypal');
