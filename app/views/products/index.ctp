@@ -11,14 +11,28 @@
 	<table>
 	<tr<?php echo $class;?>>
 		
-		<div><p class="leftAlign"><?php echo "Product Title: " . $product['Product']['title']; ?></p></div>	
+		<div>
+			<p class="productHeader">
+				<?php echo $product['Product']['title']; ?>
+			</p>
+		</div>	
 		
-		<div><?php foreach($product['Photo'] as $photo): ?>
-		<?php echo $this->Html->image('/uploads/' . $photo['location'], array('alt' => $photo['location'], 'width' => '150px')); ?>
-		<?php endforeach; ?></div>		
-		<div><p class="leftAlign"><?php echo "Price: " . $product['Product']['price']; ?><p class="rightAlign"><?php echo "Buy now: " . $product['Product']['paypal']; ?></p></div>
+		<div class="photocontainer">
+			<?php foreach($product['Photo'] as $photo): ?>
+			<?php echo $this->Html->image('/uploads/' . $photo['location'], array('alt' => $photo['location'], 'width' => '150px')); ?>
+			<?php endforeach; ?>
+		</div>
 		
-		<div class="sectionseparator">&nbsp;</div>
+		<div>
+			<p class="leftAlign">
+				<?php echo "Price: " . $product['Product']['price']; ?>
+			</p>
+			<p class="rightAlign">
+				<?php echo "Buy now: " . $product['Product']['paypal']; ?>
+			</p>
+		</div>
+		
+		<div class="sectionseparator clear">&nbsp;</div>
 		
 		<td class="actions"  style="display:none;">
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $product['Product']['id'])); ?>

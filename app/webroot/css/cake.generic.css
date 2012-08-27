@@ -193,7 +193,7 @@ table td.actions a {
 
 /** Paging **/
 div.paging {
-	background:#fff;
+	/**background:#fff;**/
 	color: #ccc;
 	margin-top: 1em;
 	clear:both;
@@ -551,4 +551,29 @@ div.code-coverage-results span.result-good {
 
 .products img{
 	width:230px;
+}
+
+.productHeader {
+	margin-bottom:50px;
+	font-family:Tahoma;
+	font-weight:bld;
+	font-size:24px;
+	text-align:left;
+}
+
+.leftAlign{
+	float:left;
+}
+
+.rightAlign{
+	float:right;
+}
+
+.clear{
+	clear:both;
+}
+
+.photocontainer{
+	margin-bottom:20px;
+	text-align:center;
 }
