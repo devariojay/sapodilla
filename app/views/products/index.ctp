@@ -1,14 +1,5 @@
 <div class="products index">
-	<h2><?php __('Products');?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<tr>
-			<!-- <th><?php #echo $this->Paginator->sort('id');?></th> -->
-			<!-- <th><?php #echo $this->Paginator->sort('title');?></th> -->
-
-			<!-- <th><?php #echo $this->Paginator->sort('price');?></th> -->
-
-			<!-- <th class="actions"  style="display:none;"><?php #__('Actions');?></th> -->
-	</tr>
+	
 	<?php
 	$i = 0;
 	foreach ($products as $product):
@@ -17,15 +8,15 @@
 			$class = ' class="altrow"';
 		}
 	?>
+	<table>
 	<tr<?php echo $class;?>>
 		
-		<div><?php echo "Product Title: " . $product['Product']['title']; ?></div>
-	
+		<div><p class="leftAlign"><?php echo "Product Title: " . $product['Product']['title']; ?></p></div>	
 		
 		<div><?php foreach($product['Photo'] as $photo): ?>
 		<?php echo $this->Html->image('/uploads/' . $photo['location'], array('alt' => $photo['location'], 'width' => '150px')); ?>
 		<?php endforeach; ?></div>		
-		<div><?php echo "Price: " . $product['Product']['price']; ?></div></div><?php echo "Buy now: " . $product['Product']['paypal']; ?>
+		<div><p class="leftAlign"><?php echo "Price: " . $product['Product']['price']; ?><p class="rightAlign"><?php echo "Buy now: " . $product['Product']['paypal']; ?></p></div>
 		
 		<div class="sectionseparator">&nbsp;</div>
 		

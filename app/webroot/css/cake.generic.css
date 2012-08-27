@@ -23,7 +23,7 @@
 
 /** General Style Info **/
 body {
-	background: #003d4c;
+	/**background: #003d4c;**/
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
@@ -95,11 +95,14 @@ ul, li {
 	text-decoration: underline;
 }
 #content{
-	background: #fff;
+	background-color: #eee;
 	clear: both;
 	color: #333;
 	padding: 10px 20px 40px 20px;
 	overflow: auto;
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
 }
 #footer {
 	clear: both;
@@ -131,7 +134,7 @@ div.actions h3 {
 
 /** Tables **/
 table {
-	background: #fff;
+	/**background: #fff;**/
 	border-right:0;
 	clear: both;
 	color: #333;
@@ -544,4 +547,8 @@ div.code-coverage-results span.result-good {
 
 .sectionseparator{
 	margin-bottom:50px;
+}
+
+.products img{
+	width:230px;
 }
