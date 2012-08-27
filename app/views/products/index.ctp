@@ -2,13 +2,12 @@
 	<h2><?php __('Products');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('title');?></th>
+			<!-- <th><?php #echo $this->Paginator->sort('id');?></th> -->
+			<!-- <th><?php #echo $this->Paginator->sort('title');?></th> -->
 
-			<th><?php echo $this->Paginator->sort('price');?></th>
-			<th><?php echo $this->Paginator->sort('paypal');?></th>
+			<!-- <th><?php #echo $this->Paginator->sort('price');?></th> -->
 
-			<th class="actions"><?php __('Actions');?></th>
+			<!-- <th class="actions"  style="display:none;"><?php #__('Actions');?></th> -->
 	</tr>
 	<?php
 	$i = 0;
@@ -19,17 +18,18 @@
 		}
 	?>
 	<tr<?php echo $class;?>>
-		<td><?php echo $product['Product']['id']; ?>&nbsp;</td>
-		<td><?php echo $product['Product']['title']; ?>&nbsp;</td>
-
-		<td><?php echo $product['Product']['price']; ?>&nbsp;</td>
-		<td><?php echo $product['Product']['paypal']; ?>&nbsp;
+		
+		<div><?php echo "Product Title: " . $product['Product']['title']; ?></div>
+	
+		
 		<div><?php foreach($product['Photo'] as $photo): ?>
 		<?php echo $this->Html->image('/uploads/' . $photo['location'], array('alt' => $photo['location'], 'width' => '150px')); ?>
-		<?php endforeach; ?></div>
-		</td>
-
-		<td class="actions">
+		<?php endforeach; ?></div>		
+		<div><?php echo "Price: " . $product['Product']['price']; ?></div></div><?php echo "Buy now: " . $product['Product']['paypal']; ?>
+		
+		<div class="sectionseparator">&nbsp;</div>
+		
+		<td class="actions"  style="display:none;">
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $product['Product']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $product['Product']['id'])); ?>
 			<?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $product['Product']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $product['Product']['id'])); ?>
@@ -39,9 +39,9 @@
 	</table>
 	<p>
 	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%', true)
-	));
+	#echo $this->Paginator->counter(array(
+	#'format' => __('Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%', true)
+	#));
 	?>	</p>
 
 	<div class="paging">
@@ -51,7 +51,9 @@
 		<?php echo $this->Paginator->next(__('next', true) . ' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
 </div>
-<div class="actions">
+
+
+<div class="actions" style="display:none;">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Product', true), array('action' => 'add')); ?></li>

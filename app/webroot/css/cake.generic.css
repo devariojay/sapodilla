@@ -111,10 +111,12 @@ ul, li {
 div.form,
 div.index,
 div.view {
-	float:right;
+	#float:right;
 	width:76%;
-	border-left:1px solid #666;
+	#border-left:1px solid #666;
 	padding:10px 2%;
+	margin-left:auto;
+	margin-right:auto;
 }
 div.actions {
 	float:left;
@@ -538,4 +540,8 @@ div.code-coverage-results span.result-good {
 /** Elements **/
 #url-rewriting-warning {
 	display: none;
+}
+
+.sectionseparator{
+	margin-bottom:50px;
 }
