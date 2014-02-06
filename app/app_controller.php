@@ -35,8 +35,10 @@
 class AppController extends Controller {
     
     function beforeFilter(){
-        $uploaddir = "c:/xampp/htdocs/sapodilla/webroot/uploads/";
-        $this->set('uploaddir', $uploaddir);
+
+	define("UPLOAD_DIR", "C:/xampp/htdocs/sapodilla/app/webroot/uploads/");
+        #$uploaddir = "c:/xampp/htdocs/sapodilla/webroot/uploads/";
+        #$this->set('uploaddir', $uploaddir);
     }
     
 }

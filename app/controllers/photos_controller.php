@@ -9,7 +9,7 @@ class PhotosController extends AppController {
 		
 			//pr($upload);
 			//exit;
-			$uploadDir = "C:/xampp/htdocs/sapodilla/app/webroot/uploads/";
+			$uploadDir = UPLOAD_DIR;
 			if(move_uploaded_file($upload['tmp_name'], $uploadDir . $upload['name'])){
 				$this->data['Photo']['location'] = $upload['name'];
 				return $this->data['Photo'];
